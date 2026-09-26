@@ -1,0 +1,10 @@
+# Direct dependencies required by the DMGSO reproducibility package.
+# Versions correspond to the audited revision environment.
+
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.3
+matplotlib==3.11.1
+coco-experiment==2.8.2
+cma==4.4.2
+opfunu==1.0.4

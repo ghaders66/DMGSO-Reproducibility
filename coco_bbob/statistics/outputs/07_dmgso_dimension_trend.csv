@@ -1,0 +1,6 @@
+dimension,average_rank,rank_order,total_pairwise_wins,total_pairwise_ties,total_pairwise_losses,comparisons_significant_after_holm
+2,4.280555555555556,5,258,4,1178,4
+5,4.2972222222222225,5,253,0,1187,4
+10,4.283333333333333,5,258,0,1182,4
+20,4.2972222222222225,5,253,0,1187,4
+40,4.058333333333334,4,339,0,1101,4

@@ -1,0 +1,2 @@
+statistical_unit,n_functions,n_algorithms,friedman_statistic,p_value,alpha,significant,kendall_W
+CEC2014 benchmark function,30,4,33.879999999999995,2.100183323628373e-07,0.05,True,0.3764444444444444

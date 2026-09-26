@@ -1,0 +1,5 @@
+algorithm,observations_per_function,run_semantics,seed_policy,unique_seed_values
+DMGSO,30,30 deterministic run_id configurations; run_id controls deterministic Halton initialization/relocation,No stochastic seed; seed column intentionally empty,0
+CMA-ES,30,30 stochastic runs per function,Explicit seed recorded for each run,30
+DE,30,30 stochastic runs per function,Explicit seed recorded for each run,30
+PSO,30,30 stochastic runs per function,Explicit seed recorded for each run,30

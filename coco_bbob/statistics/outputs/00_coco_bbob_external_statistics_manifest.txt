@@ -1,0 +1,69 @@
+COCO/BBOB EXTERNAL COMPARISON — REVISION STATISTICS MANIFEST
+======================================================================
+
+FROZEN INPUTS
+D2-D20: /mnt/d/PHD/DMGSO_Information Scince/Revision/coco_bbob/backup/frozen_20260911/coco_bbob_deterministic_D2_D20_corrected_FROZEN.csv
+SHA-256: 68c2ae2b4776714d2a3fcd4202232db1d745e1d71fe6465cff6102c9ab14d229
+
+D40: /mnt/d/PHD/DMGSO_Information Scince/Revision/coco_bbob/backup/frozen_20260911/coco_bbob_deterministic_D40_corrected_FROZEN.csv
+SHA-256: 9e67d3bbe0f8d8c19f382235107abba7698f2eec59068eb5f51da60c95a3877d
+
+Official f*: /mnt/d/PHD/DMGSO_Information Scince/Revision/coco_bbob/backup/frozen_20260911/bbob_fopt_cocoex_2.8.2_FROZEN.csv
+SHA-256: ff273dc9c7cd97c15f3abf70e7b0816ca76137b57cc7907fb7aea814357b5dc0
+
+CORRECTED PERFORMANCE MEASURE
+error_corrected = best_f - f_opt_official
+Historical error/f_opt columns are provenance-only.
+
+EXPERIMENTAL DESIGN
+Algorithms: DMGSO, NELDER-MEAD, POWELL, COBYLA, COMPASS
+Dimensions: 2, 5, 10, 20, 40
+Functions: 24
+Instances per function: 15
+run_id observations per algorithm-problem block: 5
+
+INFERENTIAL AGGREGATION
+Median corrected error across the five run_id observations.
+
+DIMENSION-WISE STATISTICAL UNIT
+One BBOB function-instance problem.
+Paired units per dimension: 24 x 15 = 360.
+
+OMNIBUS ANALYSIS
+Friedman test separately at each dimension.
+Overall effect size: Kendall's W.
+
+PLANNED PAIRED COMPARISONS
+DMGSO vs NELDER-MEAD
+DMGSO vs POWELL
+DMGSO vs COBYLA
+DMGSO vs COMPASS
+
+PAIRWISE ANALYSIS
+Wilcoxon signed-rank test on 360 paired problem units per dimension.
+Holm correction across four planned comparisons within each dimension.
+Paired effect size: rank-biserial correlation.
+Positive effect size favors DMGSO.
+
+PRACTICAL-SIGNIFICANCE SUMMARIES
+Median paired improvement = baseline error - DMGSO error.
+95% bootstrap CI for the median paired improvement.
+Problem-level win/tie/loss.
+
+FE PROTOCOL
+Maximum budget = 1000 x D.
+Realized FE use is reported descriptively.
+
+DIMENSION-WISE FRIEDMAN RESULTS
+D=2: statistic=337.0487804878045, p=1.096527282917338e-71, Kendall_W=0.2340616531165309
+D=5: statistic=338.4126001968779, p=5.56689711855812e-72, Kendall_W=0.2350087501367207
+D=10: statistic=333.8610136178574, p=5.34726404972958e-71, Kendall_W=0.2318479261235121
+D=20: statistic=350.6094757499301, p=1.295339689920283e-74, Kendall_W=0.2434788026041182
+D=40: statistic=555.5166806840485, p=6.551086849499653e-119, Kendall_W=0.3857754726972559
+
+INTERPRETATION LIMITS
+The 360 units per dimension are function-instance problems, not 360 functions.
+No cross-dimension hypothesis test is introduced.
+Statistical significance is interpreted with rank/effect direction.
+
+======================================================================

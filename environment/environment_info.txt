@@ -1,0 +1,54 @@
+DMGSO Reproducibility Environment
+=================================
+
+Python
+------
+Python: 3.11.15
+Compiler: GCC 13.3.0
+
+Operating system
+----------------
+Ubuntu: 24.04.4 LTS (Noble Numbat)
+Environment: WSL2
+Kernel: 6.6.87.2-microsoft-standard-WSL2
+Architecture: x86_64
+
+Hardware visible to WSL2
+------------------------
+CPU: 13th Gen Intel(R) Core(TM) i9-13980HX
+Physical cores: 16
+Logical CPUs: 32
+Threads per core: 2
+WSL-visible memory: approximately 15 GiB
+WSL swap: 4.0 GiB
+
+Direct Python dependencies
+--------------------------
+NumPy: 1.26.4
+SciPy: 1.13.1
+pandas: 2.2.3
+Matplotlib: 3.11.1
+COCO/cocoex (coco-experiment): 2.8.2
+cma: 4.4.2
+opfunu: 1.0.4
+
+Benchmark dependencies
+----------------------
+COCO/BBOB:
+  coco-experiment 2.8.2 provides the cocoex interface.
+
+CEC2014:
+  opfunu 1.0.4 provides the CEC2014 F1-F30 benchmark functions.
+
+Baseline optimization:
+  SciPy 1.13.1 provides scipy.optimize routines.
+  cma 4.4.2 provides the CMA-ES implementation.
+
+Notes
+-----
+The dependency versions above correspond to the audited Python
+environment used for the revision-stage reproducibility package.
+
+Only direct dependencies required by the sealed source code are listed
+in requirements.txt. Transitive packages present in the development
+virtual environment are intentionally not pinned there.

@@ -1,0 +1,4 @@
+comparison,reference_algorithm,baseline_algorithm,statistical_unit,n_functions,wilcoxon_statistic,p_value_raw,rank_biserial_correlation,effect_direction,median_paired_improvement_baseline_minus_dmgso,bootstrap_95ci_low,bootstrap_95ci_high,wins_dmgso_better,ties,losses_dmgso_worse,p_value_holm,significant_holm_0.05
+DMGSO vs CMA-ES,DMGSO,CMA-ES,CEC2014 benchmark function,30,57.0,0.00012333691120147705,-0.7548387096774194,favors CMA-ES,-50.01677735961327,-2220.366718820829,-6.180943475835932,5,0,25,0.00037001073360443115,True
+DMGSO vs DE,DMGSO,DE,CEC2014 benchmark function,30,57.0,0.00012333691120147705,-0.7548387096774194,favors DE,-42.313829202211,-2007.9116315290216,-1.155258782968474,5,0,25,0.00037001073360443115,True
+DMGSO vs PSO,DMGSO,PSO,CEC2014 benchmark function,30,90.0,0.002560090273618698,0.6129032258064516,favors DMGSO,134.7168655579418,1.6402425336182773,34118.49649083159,21,0,9,0.002560090273618698,True

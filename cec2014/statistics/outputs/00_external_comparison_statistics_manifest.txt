@@ -1,0 +1,65 @@
+CEC2014 EXTERNAL COMPARISON — REVISION STATISTICS MANIFEST
+======================================================================
+Input file:
+/mnt/d/PHD/DMGSO_Information Scince/Revision/cec2014/raw/cec2014_run_summary_revision.csv
+
+Verified SHA-256:
+c68607bdb0ff218deba460f1d810a85021585068df890bd78660d010ff04d020
+
+Frozen design:
+- CEC2014 functions: F1-F30
+- Dimension: D=30
+- Algorithms: DMGSO, CMA-ES, DE, PSO
+- Observations per algorithm/function: 30
+- Total raw records: 3600
+- Maximum FE budget: 300000
+
+Run/configuration semantics:
+- DMGSO: deterministic run_id configurations controlling Halton
+  initialization/relocation.
+- CMA-ES, DE, PSO: stochastic runs with explicit seeds.
+
+Inferential statistical unit:
+CEC2014 benchmark function (n=30)
+
+Function-level aggregation before inference:
+Median error across the 30 run/configuration observations.
+
+Omnibus analysis:
+Friedman test across the four algorithms.
+
+Overall effect size:
+Kendall's W.
+
+Planned paired comparisons:
+DMGSO vs CMA-ES
+DMGSO vs DE
+DMGSO vs PSO
+
+Pairwise analysis:
+Wilcoxon signed-rank test on 30 paired function-level median errors.
+Holm correction across the three planned comparisons.
+
+Pairwise effect size:
+Paired rank-biserial correlation.
+Positive values favor DMGSO.
+
+Practical-significance summaries:
+- Median paired improvement = baseline error - DMGSO error
+- 95% bootstrap CI for the median paired improvement
+- Function-level win/tie/loss from the DMGSO perspective
+
+Bootstrap:
+20000 percentile resamples of the 30 benchmark functions.
+Base reproducibility seed: 20260911
+
+FE-budget interpretation:
+300,000 is the common maximum budget, not equal realized FE consumption.
+Algorithm-specific stopping behavior is reported separately and must not be
+interpreted as general computational superiority without additional evidence.
+
+Friedman result:
+statistic = 33.88
+p-value   = 2.100183323628373e-07
+Kendall W = 0.3764444444444444
+======================================================================

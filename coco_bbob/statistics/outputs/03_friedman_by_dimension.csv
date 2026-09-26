@@ -1,0 +1,6 @@
+dimension,statistical_unit,n_paired_problem_units,n_algorithms,friedman_statistic,p_value,alpha,significant,kendall_W
+2,BBOB function-instance problem,360,5,337.04878048780455,1.0965272829173384e-71,0.05,True,0.23406165311653093
+5,BBOB function-instance problem,360,5,338.41260019687786,5.56689711855812e-72,0.05,True,0.23500875013672073
+10,BBOB function-instance problem,360,5,333.8610136178574,5.34726404972958e-71,0.05,True,0.23184792612351207
+20,BBOB function-instance problem,360,5,350.60947574993014,1.295339689920283e-74,0.05,True,0.24347880260411817
+40,BBOB function-instance problem,360,5,555.5166806840485,6.551086849499653e-119,0.05,True,0.38577547269725593

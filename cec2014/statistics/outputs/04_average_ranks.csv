@@ -1,0 +1,5 @@
+algorithm,average_rank,rank_order
+CMA-ES,1.5333333333333334,1
+DE,2.2,2
+DMGSO,2.966666666666667,3
+PSO,3.3,4
