@@ -1,0 +1,45 @@
+DMGSO FOUR-TOPOLOGY STATISTICS — REVISION MANIFEST
+========================================================================
+
+Frozen inputs:
+Historical D2-D20 SHA-256: 68c2ae2b4776714d2a3fcd4202232db1d745e1d71fe6465cff6102c9ab14d229
+Historical D40 SHA-256:     9e67d3bbe0f8d8c19f382235107abba7698f2eec59068eb5f51da60c95a3877d
+Revision topology SHA-256:  7f9f59bd2211ac86b51827d3ca6262aff339f1752e9ca92907497ff33a64e04c
+
+Combined design:
+- Topologies: HISTORICAL, AXIS_ONLY, FIXED8_UNIQUE, DIM_ADAPTIVE
+- Functions: BBOB F1-F24
+- Instances: 15 official instances
+- Dimensions: D=20 and D=40
+- run_id: 0-4
+- Budget: 1000 x D
+- Rows per topology: 3600
+- Combined in-memory rows: 14400
+
+Inferential statistical unit:
+BBOB benchmark function (n=24), analyzed separately at each dimension.
+
+Function-level aggregation:
+Median corrected error across 15 instances x 5 deterministic configurations.
+
+Omnibus:
+Friedman test across four topologies and Kendall's W.
+
+Planned paired contrasts:
+HISTORICAL -> AXIS_ONLY
+HISTORICAL -> FIXED8_UNIQUE
+AXIS_ONLY -> FIXED8_UNIQUE
+FIXED8_UNIQUE -> DIM_ADAPTIVE
+
+Pairwise inference:
+Wilcoxon signed-rank test across 24 paired function-level medians.
+Rank-biserial correlation; positive values favor NEW topology.
+Win/tie/loss reported for direction.
+
+Multiplicity:
+Primary Holm correction: four planned contrasts within each dimension.
+Sensitivity Holm correction: all eight dimension-specific tests.
+
+Raw-data policy:
+All frozen inputs are read-only. No merged raw CSV is created.
+========================================================================

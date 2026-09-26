@@ -1,0 +1,36 @@
+====================================================================================
+DMGSO FOUR-TOPOLOGY COMBINED FROZEN AUDIT
+====================================================================================
+
+Frozen source fingerprints:
+  Historical D2-D20 : 68c2ae2b4776714d2a3fcd4202232db1d745e1d71fe6465cff6102c9ab14d229
+  Historical D40     : 9e67d3bbe0f8d8c19f382235107abba7698f2eec59068eb5f51da60c95a3877d
+  Revision topology  : 7f9f59bd2211ac86b51827d3ca6262aff339f1752e9ca92907497ff33a64e04c
+
+Historical DMGSO rows : 3600 / 3600
+Revision topology rows: 10800 / 10800
+Combined in-memory rows: 14400 / 14400
+
+Rows by topology:
+topology
+AXIS_ONLY        3600
+DIM_ADAPTIVE     3600
+FIXED8_UNIQUE    3600
+HISTORICAL       3600
+
+Functions             : 24 (F1-F24)
+Instances             : 15
+Dimensions            : [20, 40]
+Run IDs               : [0, 1, 2, 3, 4]
+Four-way paired blocks: 3600 / 3600
+Duplicate keys        : 0
+Incomplete pair blocks: 0
+Non-ok rows           : 0
+FE-budget violations  : 0
+Non-finite errors     : 0
+Historical error max mismatch: 1.455e-11
+Revision error max mismatch  : 2.910e-11
+Official f* mismatches       : 0
+
+FINAL STATUS: COMBINED FOUR-TOPOLOGY AUDIT PASSED
+====================================================================================

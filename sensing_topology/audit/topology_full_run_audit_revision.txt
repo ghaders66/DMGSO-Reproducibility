@@ -1,0 +1,36 @@
+DMGSO SENSING-TOPOLOGY FULL RUN — FINAL AUDIT
+========================================================================
+
+Dataset: /mnt/d/PHD/DMGSO_Information Scince/Revision/sensing_topology/raw/topology_full_run_summary_revision.csv
+SHA-256: 7f9f59bd2211ac86b51827d3ca6262aff339f1752e9ca92907497ff33a64e04c
+
+[PASS] Rows: 10800 / expected 10800
+[PASS] Topologies: 3 / expected 3
+[PASS] Functions: 24 / expected 24
+[PASS] Instances: 15 / expected 15
+[PASS] Dimensions: [20, 40] / expected [20, 40]
+[PASS] Run IDs: [0, 1, 2, 3, 4] / expected [0, 1, 2, 3, 4]
+[PASS] Duplicate keys: 0 / expected 0
+[PASS] Non-ok rows: 0 / expected 0
+[PASS] FE-budget violations: 0 / expected 0
+[PASS] Non-finite corrected errors: 0 / expected 0
+[PASS] Material negative corrected errors: 0 / expected 0
+[PASS] Incomplete 5-run blocks: 0 / expected 0
+[PASS] Topology-count mismatches: 0 / expected 0
+
+Rows by topology:
+topology
+AXIS_ONLY        3600
+DIM_ADAPTIVE     3600
+FIXED8_UNIQUE    3600
+
+Rows by topology/dimension:
+topology       dimension
+AXIS_ONLY      20           1800
+               40           1800
+DIM_ADAPTIVE   20           1800
+               40           1800
+FIXED8_UNIQUE  20           1800
+               40           1800
+
+FINAL STATUS: FULL TOPOLOGY AUDIT PASSED

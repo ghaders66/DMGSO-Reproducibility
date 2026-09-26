@@ -1,0 +1,59 @@
+====================================================================================
+DMGSO SENSING TOPOLOGY — COMBINED FOUR-TOPOLOGY STATISTICAL ANALYSIS
+====================================================================================
+
+Inferential unit: BBOB function (n=24), separately at D=20 and D=40.
+Function-level value: median corrected error across 75 matched raw records.
+
+D=20 — OMNIBUS TOPOLOGY COMPARISON
+Friedman chi2=4.55, p=0.207874, Kendall W=0.0632
+Average ranks (lower is better):
+  FIXED8_UNIQUE: average rank=2.0417, median rank=2.0000, rank-1 count=8
+  DIM_ADAPTIVE: average rank=2.5000, median rank=2.0000, rank-1 count=7
+  AXIS_ONLY: average rank=2.7083, median rank=3.0000, rank-1 count=5
+  HISTORICAL: average rank=2.7500, median rank=3.0000, rank-1 count=4
+
+D=20 — PRE-SPECIFIED PAIRED CONTRASTS
+  HISTORICAL -> AXIS_ONLY: W/T/L=14/0/10, r_rb=0.3400, favors new topology, p_raw=0.151501, p_Holm(dim)=0.303002, p_Holm(global8)=0.606004
+  HISTORICAL -> FIXED8_UNIQUE: W/T/L=15/0/9, r_rb=0.4400, favors new topology, p_raw=0.0604271, p_Holm(dim)=0.181281, p_Holm(global8)=0.302135
+  AXIS_ONLY -> FIXED8_UNIQUE: W/T/L=18/0/6, r_rb=0.5000, favors new topology, p_raw=0.0314816, p_Holm(dim)=0.125926, p_Holm(global8)=0.220371
+  FIXED8_UNIQUE -> DIM_ADAPTIVE: W/T/L=10/0/14, r_rb=-0.2867, favors old topology, p_raw=0.22919, p_Holm(dim)=0.303002, p_Holm(global8)=0.687569
+
+D=40 — OMNIBUS TOPOLOGY COMPARISON
+Friedman chi2=4.5, p=0.21229, Kendall W=0.0625
+Average ranks (lower is better):
+  FIXED8_UNIQUE: average rank=2.0417, median rank=2.0000, rank-1 count=6
+  DIM_ADAPTIVE: average rank=2.5417, median rank=3.0000, rank-1 count=9
+  HISTORICAL: average rank=2.6250, median rank=3.0000, rank-1 count=5
+  AXIS_ONLY: average rank=2.7917, median rank=3.0000, rank-1 count=4
+
+D=40 — PRE-SPECIFIED PAIRED CONTRASTS
+  HISTORICAL -> AXIS_ONLY: W/T/L=11/0/13, r_rb=0.1467, favors new topology, p_raw=0.54567, p_Holm(dim)=0.579334, p_Holm(global8)=0.687569
+  HISTORICAL -> FIXED8_UNIQUE: W/T/L=15/0/9, r_rb=0.4733, favors new topology, p_raw=0.0424892, p_Holm(dim)=0.127468, p_Holm(global8)=0.254935
+  AXIS_ONLY -> FIXED8_UNIQUE: W/T/L=18/0/6, r_rb=0.5867, favors new topology, p_raw=0.0105078, p_Holm(dim)=0.0420313, p_Holm(global8)=0.0840626
+  FIXED8_UNIQUE -> DIM_ADAPTIVE: W/T/L=10/0/14, r_rb=-0.2533, favors old topology, p_raw=0.289667, p_Holm(dim)=0.579334, p_Holm(global8)=0.687569
+
+TOPOLOGY STRUCTURE AND NOMINAL NORMAL-ITERATION COST
+  D=20, AXIS_ONLY: stored=40, unique=40, duplicates=0, normal_iteration_FE=81, FE_vs_axis=1.000, median_wall_sec=0.2951
+  D=20, DIM_ADAPTIVE: stored=60, unique=60, duplicates=0, normal_iteration_FE=121, FE_vs_axis=1.494, median_wall_sec=0.2921
+  D=20, FIXED8_UNIQUE: stored=48, unique=48, duplicates=0, normal_iteration_FE=97, FE_vs_axis=1.198, median_wall_sec=0.2937
+  D=20, HISTORICAL: stored=48, unique=42, duplicates=6, normal_iteration_FE=97, FE_vs_axis=1.198, median_wall_sec=0.3015
+  D=40, AXIS_ONLY: stored=80, unique=80, duplicates=0, normal_iteration_FE=161, FE_vs_axis=1.000, median_wall_sec=1.0121
+  D=40, DIM_ADAPTIVE: stored=120, unique=120, duplicates=0, normal_iteration_FE=241, FE_vs_axis=1.497, median_wall_sec=1.0124
+  D=40, FIXED8_UNIQUE: stored=88, unique=88, duplicates=0, normal_iteration_FE=177, FE_vs_axis=1.099, median_wall_sec=1.0128
+  D=40, HISTORICAL: stored=88, unique=82, duplicates=6, normal_iteration_FE=177, FE_vs_axis=1.099, median_wall_sec=1.2618
+
+INTERPRETATION GUARDRAILS
+- The omnibus Friedman test is considered before broad topology claims.
+- Pairwise tests are limited to four pre-specified reviewer-driven contrasts.
+- Statistical significance is interpreted jointly with direction,
+  rank-biserial effect size, and win/tie/loss counts.
+- HISTORICAL and FIXED8_UNIQUE have the same stored direction count and
+  nominal normal-iteration FE cost; they differ in diagonal uniqueness.
+- DIM_ADAPTIVE increases directional coverage and nominal sensing cost.
+- Wall time is descriptive and is not treated as pure algorithmic overhead.
+- BBOB instances and deterministic run_id values are not inferential
+  replications.
+
+All frozen raw inputs remained read-only. No merged raw CSV was created.
+====================================================================================
