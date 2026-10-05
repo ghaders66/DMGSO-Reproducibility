@@ -1,0 +1,25 @@
+{
+  "analysis_script": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/code/analyze_noise_sensitivity_revision.py",
+  "analysis_script_sha256": "e69b82edf126f5822db4b11964e66ee64eed2a02b8ff733ce891ae6e74167b51",
+  "bootstrap_reps": 100000,
+  "bootstrap_seed": 20261001,
+  "numpy": "1.26.4",
+  "outputs": {
+    "processed/01_function_level_noise_summary.csv": "260eb0d92cddd5a6e1eeb7d4bf86673a787d5e64746948f70eca6073f6b8a698",
+    "processed/03_function_level_paired_matrix.csv": "6b606eafcac86a7009b347d32c1c4b1e075f84b5433d6755511701cca2611017",
+    "processed/06_function_wise_noise_differences.csv": "9011ca3dde7ef827af538e1c39ea2062549d21a483789f59618fab62beac3e4d",
+    "statistics/02_noise_descriptive_statistics.csv": "4980b2d308d1ad0978fd3145cdfe3aa464dc9bf960f36f7420863dcb46765e70",
+    "statistics/04_friedman_noise_test.json": "6624d2e09bfaf6edf30677bd317eb132d5d757a485ebcbbd4a4fb8def767d59e",
+    "statistics/05_wilcoxon_holm_noise_vs_control.csv": "96f3e237fe7888f4a745241d094573b32e36f532da31cc9430a5f159048134d7",
+    "statistics/07_secondary_execution_diagnostics.csv": "de430c830d08928717627e7d668f2ee2bd716671babc92f810e2af20f066c9dc",
+    "statistics/08_noise_analysis_summary.json": "46e18143a7fa4fdf17cdb47a3fd83db96cc665c954b5e243cd0cf2565c8c754c"
+  },
+  "pandas": "2.2.3",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "protocol_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/configs/noise_sensitivity_protocol.json",
+  "protocol_sha256": "b8af43907ede8e1e0fb16e90352d353abd11104626b08df9716f639340fc2dd3",
+  "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+  "raw_frozen_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/raw/noise_sensitivity_cec2014_run_summary_FROZEN.csv",
+  "raw_frozen_sha256": "26bf67a1e92cb32106a40fb7eca73c7ca8430a63907ca6e585c365b3b6c3193b",
+  "scipy": "1.13.1"
+}

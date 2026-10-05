@@ -1,0 +1,46 @@
+{
+  "FE_budget": [
+    300000
+  ],
+  "dimension": [
+    30
+  ],
+  "duplicate_design_keys": 0,
+  "expected_rows": 240,
+  "functions": [
+    1,
+    2,
+    3,
+    4,
+    8,
+    12,
+    17,
+    20,
+    22,
+    23,
+    26,
+    30
+  ],
+  "noise_levels": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "pass": true,
+  "primary_outcome": "true_final_error",
+  "problems": [],
+  "protocol_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/configs/noise_sensitivity_protocol.json",
+  "protocol_sha256": "b8af43907ede8e1e0fb16e90352d353abd11104626b08df9716f639340fc2dd3",
+  "raw_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/raw/noise_sensitivity_cec2014_run_summary_FROZEN.csv",
+  "raw_sha256": "26bf67a1e92cb32106a40fb7eca73c7ca8430a63907ca6e585c365b3b6c3193b",
+  "rows": 240,
+  "run_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "unique_design_keys": 240
+}

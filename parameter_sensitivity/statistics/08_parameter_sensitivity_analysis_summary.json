@@ -1,0 +1,40 @@
+{
+  "analysis": "DMGSO OFAT parameter sensitivity",
+  "analysis_role": "characterization only; not parameter tuning",
+  "baseline_retuned": false,
+  "benchmark": "CEC2014 F1-F30",
+  "bootstrap_ci": "percentile 95% CI for median paired difference",
+  "bootstrap_reps": 100000,
+  "bootstrap_seed": 20261002,
+  "core_modified": false,
+  "dimension": 30,
+  "effect_size": "paired rank-biserial correlation",
+  "fe_budget": 300000,
+  "function_aggregation": "median over five run_ids",
+  "holm_significant_case_ids": [
+    "delta0_frac__upper"
+  ],
+  "inferential_unit": "benchmark function",
+  "interpretation_guardrail": "The analysis characterizes local OFAT sensitivity around the frozen baseline settings. It does not establish global parameter optimality, parameter interactions, or justify retuning the baseline.",
+  "lower_error_is_better": true,
+  "multiplicity": "Holm correction across 16 perturbation-vs-baseline comparisons",
+  "n_configurations": 17,
+  "n_expected_unique_runs": 2550,
+  "n_holm_significant_comparisons": 1,
+  "n_inferential_units": 30,
+  "n_parameters_with_any_holm_significant_perturbation": 1,
+  "n_perturbations": 16,
+  "paired_difference": "perturbation corrected_error minus baseline corrected_error",
+  "planned_test": "two-sided paired Wilcoxon signed-rank",
+  "primary_outcome": "corrected_error",
+  "raw_sha256": "5f7a188a8511134d20dec7101dce2874ad129764db227c570bb5b0b370840482",
+  "reviewer_comment": "Reviewer 5 Comment 6",
+  "run_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "runs_per_function_configuration": 5
+}

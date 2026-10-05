@@ -1,0 +1,163 @@
+{
+  "timestamp": "2026-10-01T13:10:48+02:00",
+  "runner": "/mnt/d/PHD/DMGSO_Information Scince/Revision/parameter_sensitivity/code/run_parameter_sensitivity.py",
+  "python": "3.11.15",
+  "python_executable": "/mnt/d/PHD/DMGSO_Information Scince/Revision/.venv_revision_py311/bin/python",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "protocol_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/parameter_sensitivity/configs/sensitivity_protocol.json",
+  "protocol_sha256": "5760a3082cfaa7be9e249484863aff908061156e9d5c76565ad7f1a40223526f",
+  "core_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/cec2014/code/dmgso_core_revision.py",
+  "core_sha256": "cadf35f0ae664619527707caf2deea4a163e79eb970cf273e53f5490f9cd9191",
+  "benchmark": {
+    "suite": "CEC2014",
+    "wrapper": "cec2014/code/wrapper_cec2014_revision.py",
+    "function_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "dimension": 30,
+    "maximum_function_evaluations": 300000,
+    "run_ids": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "corrected_error": "best_f_minus_f_opt",
+    "negative_error_tolerance": 1e-08
+  },
+  "number_of_cases": 17,
+  "cases": [
+    {
+      "case_id": "baseline",
+      "parameter": "baseline",
+      "level": "baseline",
+      "value": null
+    },
+    {
+      "case_id": "s0_frac__lower",
+      "parameter": "s0_frac",
+      "level": "lower",
+      "value": 0.01
+    },
+    {
+      "case_id": "s0_frac__upper",
+      "parameter": "s0_frac",
+      "level": "upper",
+      "value": 0.04
+    },
+    {
+      "case_id": "delta0_frac__lower",
+      "parameter": "delta0_frac",
+      "level": "lower",
+      "value": 0.0025
+    },
+    {
+      "case_id": "delta0_frac__upper",
+      "parameter": "delta0_frac",
+      "level": "upper",
+      "value": 0.01
+    },
+    {
+      "case_id": "Delta0_frac__lower",
+      "parameter": "Delta0_frac",
+      "level": "lower",
+      "value": 0.025
+    },
+    {
+      "case_id": "Delta0_frac__upper",
+      "parameter": "Delta0_frac",
+      "level": "upper",
+      "value": 0.1
+    },
+    {
+      "case_id": "c_minus__stronger_contraction",
+      "parameter": "c_minus",
+      "level": "stronger_contraction",
+      "value": 0.5856620185738528
+    },
+    {
+      "case_id": "c_minus__weaker_contraction",
+      "parameter": "c_minus",
+      "level": "weaker_contraction",
+      "value": 0.8366600265340756
+    },
+    {
+      "case_id": "stag_trigger__lower",
+      "parameter": "stag_trigger",
+      "level": "lower",
+      "value": 30
+    },
+    {
+      "case_id": "stag_trigger__upper",
+      "parameter": "stag_trigger",
+      "level": "upper",
+      "value": 120
+    },
+    {
+      "case_id": "mem_pull__lower",
+      "parameter": "mem_pull",
+      "level": "lower",
+      "value": 0.175
+    },
+    {
+      "case_id": "mem_pull__upper",
+      "parameter": "mem_pull",
+      "level": "upper",
+      "value": 0.525
+    },
+    {
+      "case_id": "mem_push__lower",
+      "parameter": "mem_push",
+      "level": "lower",
+      "value": 0.125
+    },
+    {
+      "case_id": "mem_push__upper",
+      "parameter": "mem_push",
+      "level": "upper",
+      "value": 0.375
+    },
+    {
+      "case_id": "gate_stag_scale__lower",
+      "parameter": "gate_stag_scale",
+      "level": "lower",
+      "value": 40.0
+    },
+    {
+      "case_id": "gate_stag_scale__upper",
+      "parameter": "gate_stag_scale",
+      "level": "upper",
+      "value": 160.0
+    }
+  ]
+}

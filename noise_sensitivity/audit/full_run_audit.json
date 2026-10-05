@@ -1,0 +1,11 @@
+{
+  "duplicate_count": 0,
+  "expected_full_rows": 240,
+  "extra_full_keys": 0,
+  "missing_full_keys": 0,
+  "pass": true,
+  "path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/raw/noise_sensitivity_cec2014_run_summary.csv",
+  "problems": [],
+  "rows": 240,
+  "unique_keys": 240
+}

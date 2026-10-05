@@ -1,0 +1,11 @@
+{
+  "core_sha256": "cadf35f0ae664619527707caf2deea4a163e79eb970cf273e53f5490f9cd9191",
+  "numpy": "1.26.4",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "protocol_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/configs/noise_sensitivity_protocol.json",
+  "protocol_sha256": "b8af43907ede8e1e0fb16e90352d353abd11104626b08df9716f639340fc2dd3",
+  "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+  "runner_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/code/run_dmgso_noise_sensitivity_revision.py",
+  "runner_sha256": "a1dc5289773e013f3c0203a8ecb9317162d6aa55d51070d40c1f98f855189ffb",
+  "wrapper_sha256": "4b59f50b4d0a60034cc9dfc9dedf427a3f3eabb220583322e405bf6746ce2732"
+}

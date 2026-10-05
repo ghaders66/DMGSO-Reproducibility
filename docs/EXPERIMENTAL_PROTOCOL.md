@@ -128,6 +128,39 @@ as the inferential unit (`n=24`). Each function-level value is the median
 corrected error across 15 instances x 5 deterministic configurations,
 i.e. 75 run-level observations.
 
+## Parameter-sensitivity experiment
+
+The parameter-sensitivity study uses CEC2014 F1--F30 at D=30 with a maximum
+budget of 300,000 function evaluations and run IDs 0--4. Eight principal
+control parameters are examined using two one-factor-at-a-time perturbations
+per parameter, giving 16 perturbations plus the common frozen baseline and
+2,550 optimization runs in total. Only one sensitivity parameter changes in
+each perturbed configuration. The DMGSO V4 architecture, sensing topology,
+and canonical core remain fixed.
+
+The inferential unit is the benchmark function (n=30). Corrected final error
+is summarized within each function by the median across five run IDs.
+Perturbations are compared with the common baseline using paired Wilcoxon
+signed-rank tests with Holm correction across 16 comparisons, rank-biserial
+effect sizes, median paired differences, bootstrap 95% confidence intervals,
+and Win/Tie/Loss counts.
+
+## Observational-noise experiment
+
+The observational-noise study uses 12 CEC2014 functions at D=30, a maximum
+budget of 300,000 function evaluations, run IDs 0--4, and noise levels
+eta = 0, 1e-4, 1e-3, and 1e-2, giving 240 optimization runs. The optimizer
+observes additive Gaussian noise according to
+`f_tilde(x) = f(x) + eta*S_f*z`, where `z ~ N(0,1)` and `S_f` is the IQR of
+noiseless objective values at 128 fixed unscrambled Halton reference points
+for each function.
+
+For each function and run ID, nonzero noise levels use the same
+standard-normal stream. No parameter retuning or DMGSO core modification is
+performed. The primary outcome is the true noiseless error at the final
+`best_x`; this final assessment is not supplied to the optimizer and is not
+counted in the optimization evaluation budget.
+
 ## Main DMGSO parameterization
 
 The audited main implementation uses the following default configuration:

@@ -1,0 +1,49 @@
+{
+  "benchmark": "CEC2014",
+  "core_changed": false,
+  "dimension": 30,
+  "expected_core_sha256": "cadf35f0ae664619527707caf2deea4a163e79eb970cf273e53f5490f9cd9191",
+  "expected_wrapper_sha256": "4b59f50b4d0a60034cc9dfc9dedf427a3f3eabb220583322e405bf6746ce2732",
+  "experiment_root": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity",
+  "formula": "f_tilde(x)=f(x)+eta*S_f*z, z~N(0,1)",
+  "frozen_core": "/mnt/d/PHD/DMGSO_Information Scince/Revision/cec2014/code/dmgso_core_revision.py",
+  "frozen_wrapper": "/mnt/d/PHD/DMGSO_Information Scince/Revision/cec2014/code/wrapper_cec2014_revision.py",
+  "full_FE_budget": 300000,
+  "functions": [
+    1,
+    2,
+    3,
+    4,
+    8,
+    12,
+    17,
+    20,
+    22,
+    23,
+    26,
+    30
+  ],
+  "noise_levels_eta": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "noise_model": "additive Gaussian observational noise",
+  "pairing": "For each function_id and run_id, all nonzero eta levels use the same standard-normal stream; run_id controls DMGSO deterministic configuration and noise_seed controls observational noise.",
+  "parameter_retuning": false,
+  "planned_full_runs": 240,
+  "primary_outcome": "true noiseless error at result.best_x; final noiseless assessment is not supplied to optimizer and not counted in optimization FE",
+  "project_root": "/mnt/d/PHD/DMGSO_Information Scince/Revision",
+  "protocol_version": "R5-C8-noise-v1.0",
+  "purpose": "Reviewer 5 Comment 8 controlled observational-noise sensitivity",
+  "run_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "scale_definition": "IQR of noiseless objective values at 128 fixed unscrambled Halton reference points over each function domain; degenerate-IQR floor=max(1e-12,1e-12*max(1,median(abs(f))))",
+  "scale_points": 128
+}

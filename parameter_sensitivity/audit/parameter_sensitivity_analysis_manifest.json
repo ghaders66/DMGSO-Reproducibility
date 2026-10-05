@@ -1,0 +1,29 @@
+{
+  "analysis_role": "confirmatory OFAT sensitivity characterization",
+  "analysis_script": "/mnt/d/PHD/DMGSO_Information Scince/Revision/parameter_sensitivity/code/analyze_parameter_sensitivity_revision.py",
+  "analysis_script_sha256": "6e9c711d65386f2b836faaf6908b2bc49fd62ca735ccddbfd384a83ccd14b7e5",
+  "completion_record": "/mnt/d/PHD/DMGSO_Information Scince/Revision/parameter_sensitivity/audit/full_run_completion.json",
+  "completion_record_sha256": "5db023c05b88de77736d51bbb4cd82c1fc5eec1eb9eea251da7867c8e360193f",
+  "core_modified": false,
+  "expected_core_sha256": "cadf35f0ae664619527707caf2deea4a163e79eb970cf273e53f5490f9cd9191",
+  "expected_protocol_sha256": "5760a3082cfaa7be9e249484863aff908061156e9d5c76565ad7f1a40223526f",
+  "numpy": "1.26.4",
+  "outputs": {
+    "audit/parameter_sensitivity_analysis_input_audit.json": "1776eec2342e723232a4f1eaf4144da54c51308a4d6402847ac845ecce4d6605",
+    "processed/01_configuration_inventory.csv": "dcfc4089fcea18a6c2064321b2c802364577e14565f7d0581470619d1c5134a3",
+    "processed/02_function_level_sensitivity_summary.csv": "6b93a36f094a66e4a491d4f91a48e6540e7dc56da1f0c2636da3e449a039bcb4",
+    "processed/04_function_level_paired_matrix.csv": "84a824bddd47493308bf81c096c9a1311592b27573109b35ef7eff0720767ff3",
+    "processed/06_function_wise_paired_differences.csv": "1f6b64466e6dc76bf3a10357b4700de8d53d7fdec87782c1a5fe1084bc7ac917",
+    "statistics/03_parameter_sensitivity_descriptive_statistics.csv": "990613c45553af725e3c4b2053270ad30a37e47fed0f2548074357797fb42f54",
+    "statistics/05_wilcoxon_holm_perturbations_vs_baseline.csv": "3c8863ba3298fc89b6fb8dafe494a4e80c37f5e02d89a5e9ca11feac4092565c",
+    "statistics/07_parameter_level_characterization.csv": "717bb035d1f59c3ad7dbf3db745844dd4052460e952f8a108c4a2b1870d6633f",
+    "statistics/08_parameter_sensitivity_analysis_summary.json": "9f8109ef6c1efb271f3c455c8be8d643e87408c0d6c5bdec9c55255839306803"
+  },
+  "pandas": "2.2.3",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+  "raw_input": "/mnt/d/PHD/DMGSO_Information Scince/Revision/parameter_sensitivity/raw/parameter_sensitivity_runs.csv",
+  "raw_input_sha256": "5f7a188a8511134d20dec7101dce2874ad129764db227c570bb5b0b370840482",
+  "raw_modified": false,
+  "scipy": "1.13.1"
+}

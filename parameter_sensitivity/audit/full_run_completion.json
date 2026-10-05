@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-02T19:43:51+02:00",
+  "status": "complete",
+  "expected_runs": 2550,
+  "observed_unique_runs": 2550,
+  "runs_completed_this_invocation": 2550,
+  "core_sha256_before": "cadf35f0ae664619527707caf2deea4a163e79eb970cf273e53f5490f9cd9191",
+  "core_sha256_after": "cadf35f0ae664619527707caf2deea4a163e79eb970cf273e53f5490f9cd9191",
+  "protocol_sha256": "5760a3082cfaa7be9e249484863aff908061156e9d5c76565ad7f1a40223526f",
+  "raw_result_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/parameter_sensitivity/raw/parameter_sensitivity_runs.csv"
+}

@@ -1,0 +1,4 @@
+noise_eta,n_functions,median_delta_true_error,median_delta_n_accept,q25_delta_n_accept,q75_delta_n_accept,functions_accept_increased,functions_accept_unchanged,functions_accept_decreased,median_delta_n_reloc,q25_delta_n_reloc,q75_delta_n_reloc,functions_reloc_increased,functions_reloc_unchanged,functions_reloc_decreased
+0.0001,12,4079934.593788772,-796.0,-923.0,-674.0,0,0,12,8.5,5.75,11.0,10,0,2
+0.001,12,42035770.72054358,-928.5,-1031.5,-747.0,0,0,12,10.0,7.0,11.25,10,0,2
+0.01,12,286827230.171056,-1097.0,-1237.0,-865.25,0,0,12,11.5,8.75,13.0,10,0,2

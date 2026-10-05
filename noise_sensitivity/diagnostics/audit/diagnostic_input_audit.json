@@ -1,0 +1,9 @@
+{
+  "analysis_type": "exploratory mechanism diagnostic; not causal inference",
+  "confirmatory_outputs_modified": false,
+  "pass": true,
+  "problems": [],
+  "raw_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/raw/noise_sensitivity_cec2014_run_summary_FROZEN.csv",
+  "raw_sha256": "26bf67a1e92cb32106a40fb7eca73c7ca8430a63907ca6e585c365b3b6c3193b",
+  "rows": 240
+}

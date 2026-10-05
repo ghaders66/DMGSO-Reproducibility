@@ -1,0 +1,137 @@
+{
+  "study": {
+    "name": "DMGSO Parameter Sensitivity Study",
+    "purpose": "Reviewer 5 Comment 6",
+    "method": "one-factor-at-a-time",
+    "interpretation": "sensitivity_characterization_not_parameter_tuning",
+    "baseline_retuning_allowed": false
+  },
+
+  "environment": {
+    "python_required": "3.11.15",
+    "virtual_environment": ".venv_revision_py311"
+  },
+
+  "core": {
+    "canonical_path": "cec2014/code/dmgso_core_revision.py",
+    "sha256": "cadf35f0ae664619527707caf2deea4a163e79eb970cf273e53f5490f9cd9191",
+    "core_modification_allowed": false
+  },
+
+  "benchmark": {
+    "suite": "CEC2014",
+    "wrapper": "cec2014/code/wrapper_cec2014_revision.py",
+    "function_ids": [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+      11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+    ],
+    "dimension": 30,
+    "maximum_function_evaluations": 300000,
+    "run_ids": [0, 1, 2, 3, 4],
+    "corrected_error": "best_f_minus_f_opt",
+    "negative_error_tolerance": 1e-8
+  },
+
+  "algorithm": {
+    "version": "V4",
+    "refinement_enabled": false,
+    "architecture_fixed": true,
+    "sensing_topology_fixed": true
+  },
+
+  "baseline": {
+    "k_diag": 8,
+    "s0_frac": 0.02,
+    "delta0_frac": 0.005,
+    "Delta0_frac": 0.05,
+    "s_min_frac": 1e-6,
+    "s_max_frac": 0.2,
+    "c_plus": 1.05,
+    "c_minus": 0.7,
+    "stag_trigger": 60,
+    "max_relocs": 20,
+    "mem_best_B": 8,
+    "mem_trap_B": 10,
+    "mem_pull": 0.35,
+    "mem_push": 0.25,
+    "gate_stag_scale": 80.0,
+    "eps": 1e-12
+  },
+
+  "sensitivity_parameters": {
+    "s0_frac": {
+      "baseline": 0.02,
+      "perturbations": [0.01, 0.04]
+    },
+    "delta0_frac": {
+      "baseline": 0.005,
+      "perturbations": [0.0025, 0.01]
+    },
+    "Delta0_frac": {
+      "baseline": 0.05,
+      "perturbations": [0.025, 0.1]
+    },
+    "c_minus": {
+      "baseline": 0.7,
+      "perturbations": [0.5856620185738528, 0.8366600265340756],
+      "labels": [
+        "stronger_contraction",
+        "weaker_contraction"
+      ]
+    },
+    "stag_trigger": {
+      "baseline": 60,
+      "perturbations": [30, 120]
+    },
+    "mem_pull": {
+      "baseline": 0.35,
+      "perturbations": [0.175, 0.525]
+    },
+    "mem_push": {
+      "baseline": 0.25,
+      "perturbations": [0.125, 0.375]
+    },
+    "gate_stag_scale": {
+      "baseline": 80.0,
+      "perturbations": [40.0, 160.0]
+    }
+  },
+
+  "design": {
+    "baseline_configurations": 1,
+    "perturbed_configurations": 16,
+    "total_configurations": 17,
+    "functions": 30,
+    "runs_per_configuration_function": 5,
+    "total_optimization_runs": 2550,
+    "fresh_config_object_per_run": true,
+    "only_one_sensitivity_parameter_changed_per_perturbed_configuration": true,
+    "baseline_rerun_within_study": true
+  },
+
+  "planned_analysis": {
+    "inferential_unit": "CEC2014 benchmark function",
+    "n_paired_functions": 30,
+    "within_function_summary": "median corrected final error across five run_ids",
+    "comparison": "each perturbation versus the common baseline",
+    "paired_test": "Wilcoxon signed-rank test",
+    "multiple_testing_correction": "Holm",
+    "holm_family_size": 16,
+    "effect_size": "rank-biserial correlation",
+    "paired_location_effect": "median paired difference",
+    "confidence_interval": "bootstrap 95% confidence interval",
+    "descriptive_comparison": "Win/Tie/Loss"
+  },
+
+  "integrity": {
+    "verify_core_sha256_before_run": true,
+    "verify_core_sha256_after_run": true,
+    "fail_on_core_hash_mismatch": true,
+    "fail_on_python_version_mismatch": true,
+    "fail_on_baseline_configuration_mismatch": true,
+    "fail_on_function_evaluation_budget_violation": true,
+    "fail_on_nonfinite_result": true,
+    "full_run_requires_successful_smoke_test": true
+  }
+}

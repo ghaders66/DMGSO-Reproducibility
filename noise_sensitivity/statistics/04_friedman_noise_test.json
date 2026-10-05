@@ -1,0 +1,15 @@
+{
+  "inferential_unit": "CEC2014 benchmark function",
+  "k_conditions": 4,
+  "kendall_W": 0.5194444444444449,
+  "n_functions": 12,
+  "noise_levels": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "p_value": 0.0003153578024099862,
+  "statistic": 18.700000000000017,
+  "test": "Friedman"
+}

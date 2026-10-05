@@ -1,0 +1,22 @@
+{
+  "analysis_script": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/code/analyze_noise_mechanism_diagnostics.py",
+  "analysis_script_sha256": "396564ca9618abd1efc2c5ce7c2eb52df514d58c049fecbf0790bfc1ea6a1af2",
+  "analysis_type": "exploratory mechanism diagnostic",
+  "causal_claims_permitted": false,
+  "confirmatory_analysis_modified": false,
+  "numpy": "1.26.4",
+  "outputs": {
+    "processed/01_function_level_mechanism_summary.csv": "9deeb4710f1f9537ac0d63028ae98804a923fdcb26dada9ef57a3805843435bb",
+    "processed/02_paired_mechanism_changes.csv": "26ba79f6ca4939ec670df0beaf546fec4344a02924987ef3567fcb0049f9b6e2",
+    "processed/05_ranked_degradation_cases.csv": "7dcf55b8818289cb4f0f95b4234ca9a073a0cef4dd0f490f7794540d0aeb8ad1",
+    "processed/06_run_level_paired_diagnostics.csv": "cf8ea03a5f1ed1a631ddf57b7e81fb6dfc16585def60e7af2b2c68c462f28c0e",
+    "statistics/03_mechanism_change_summary.csv": "15a37e062e4145f8f9183b007876ea995214d669f6bb16cd183825ab443358d1",
+    "statistics/04_exploratory_mechanism_associations.csv": "ba2f27edfe34dd733277f445ac24f409d567c1774c657764b66607230cd1c16f"
+  },
+  "pandas": "2.2.3",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+  "raw_frozen_path": "/mnt/d/PHD/DMGSO_Information Scince/Revision/noise_sensitivity/raw/noise_sensitivity_cec2014_run_summary_FROZEN.csv",
+  "raw_frozen_sha256": "26bf67a1e92cb32106a40fb7eca73c7ca8430a63907ca6e585c365b3b6c3193b",
+  "scipy": "1.13.1"
+}

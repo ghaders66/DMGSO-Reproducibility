@@ -1,0 +1,124 @@
+{
+  "aggregation": "Median across five deterministic run-indexed configurations within each function and noise level.",
+  "analysis_scope": "Controlled observational-noise sensitivity of frozen DMGSO V4 on 12 representative CEC2014 functions at D=30.",
+  "descriptive": [
+    {
+      "max_function_error": 8005216.044871672,
+      "mean_function_error": 731939.4400416497,
+      "median_function_error": 3410.8944787826995,
+      "min_function_error": 0.9222150072407658,
+      "n_functions": 12,
+      "noise_eta": 0.0,
+      "q25_function_error": 217.19241990591524,
+      "q75_function_error": 65923.83394700017
+    },
+    {
+      "max_function_error": 2002973136463986.5,
+      "mean_function_error": 227464002152686.66,
+      "median_function_error": 4165940.428200729,
+      "min_function_error": 0.724563270178578,
+      "n_functions": 12,
+      "noise_eta": 0.0001,
+      "q25_function_error": 206.82069041678648,
+      "q75_function_error": 25141694351022.324
+    },
+    {
+      "max_function_error": 3.8949928421231736e+16,
+      "mean_function_error": 3361772129620311.5,
+      "median_function_error": 42121776.554955535,
+      "min_function_error": 0.682973961961352,
+      "n_functions": 12,
+      "noise_eta": 0.001,
+      "q25_function_error": 297.7297366148106,
+      "q75_function_error": 154035140235857.97
+    },
+    {
+      "max_function_error": 3.5767880449345508e+16,
+      "mean_function_error": 3747550635665382.0,
+      "median_function_error": 286913236.00546795,
+      "min_function_error": 0.9368984698803616,
+      "n_functions": 12,
+      "noise_eta": 0.01,
+      "q25_function_error": 561.7793785715124,
+      "q75_function_error": 413646831151076.5
+    }
+  ],
+  "friedman": {
+    "inferential_unit": "CEC2014 benchmark function",
+    "k_conditions": 4,
+    "kendall_W": 0.5194444444444449,
+    "n_functions": 12,
+    "noise_levels": [
+      0.0,
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "p_value": 0.0003153578024099862,
+    "statistic": 18.700000000000017,
+    "test": "Friedman"
+  },
+  "inferential_unit": "benchmark function",
+  "interpretation_guardrail": "This experiment characterizes sensitivity to the specified additive Gaussian observational-noise model only. It does not establish universal robustness to arbitrary noise processes, additional constraints, expensive objectives, dynamic problems, or real engineering applications.",
+  "n_functions": 12,
+  "noise_levels": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "planned_comparisons": [
+    {
+      "bootstrap95_median_diff_high": 50283354562759.734,
+      "bootstrap95_median_diff_low": 8.802889946559148,
+      "comparison": "eta=0.0001 vs eta=0",
+      "losses_noisy_worse": 10,
+      "median_paired_difference_noisy_minus_control": 4079934.593788772,
+      "n_functions": 12,
+      "noise_eta": 0.0001,
+      "p_holm": 0.013671875,
+      "p_raw": 0.0068359375,
+      "rank_biserial_noisy_minus_control": 0.8461538461538461,
+      "significant_holm_0.05": true,
+      "ties": 0,
+      "wilcoxon_statistic": 6.0,
+      "wins_noisy_better": 2
+    },
+    {
+      "bootstrap95_median_diff_high": 308070074178739.6,
+      "bootstrap95_median_diff_low": 41.426086291472075,
+      "comparison": "eta=0.001 vs eta=0",
+      "losses_noisy_worse": 9,
+      "median_paired_difference_noisy_minus_control": 42035770.72054358,
+      "n_functions": 12,
+      "noise_eta": 0.001,
+      "p_holm": 0.013671875,
+      "p_raw": 0.0068359375,
+      "rank_biserial_noisy_minus_control": 0.8461538461538461,
+      "significant_holm_0.05": true,
+      "ties": 0,
+      "wilcoxon_statistic": 6.0,
+      "wins_noisy_better": 3
+    },
+    {
+      "bootstrap95_median_diff_high": 827289683967249.9,
+      "bootstrap95_median_diff_low": 257.4894533810025,
+      "comparison": "eta=0.01 vs eta=0",
+      "losses_noisy_worse": 11,
+      "median_paired_difference_noisy_minus_control": 286827230.171056,
+      "n_functions": 12,
+      "noise_eta": 0.01,
+      "p_holm": 0.00439453125,
+      "p_raw": 0.00146484375,
+      "rank_biserial_noisy_minus_control": 0.9487179487179487,
+      "significant_holm_0.05": true,
+      "ties": 0,
+      "wilcoxon_statistic": 2.0,
+      "wins_noisy_better": 1
+    }
+  ],
+  "primary_outcome": "true_final_error",
+  "protocol_version": "R5-C8-noise-v1.0",
+  "raw_rows": 240,
+  "raw_sha256": "26bf67a1e92cb32106a40fb7eca73c7ca8430a63907ca6e585c365b3b6c3193b"
+}

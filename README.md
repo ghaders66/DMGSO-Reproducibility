@@ -94,6 +94,24 @@ side by side. Portable reproduction outputs are written under
 `sensing_topology/reproduction_output/`, which is excluded from version
 control so that newly generated results cannot overwrite the frozen evidence.
 
+## Parameter-sensitivity analysis
+
+The `parameter_sensitivity/` directory contains the frozen one-factor-at-a-time
+sensitivity study of eight principal DMGSO control parameters on CEC2014
+(F1--F30, D=30, 300,000 evaluations, five deterministic run IDs). The study
+characterizes the frozen V4 configuration without retuning or modifying the
+DMGSO core. Full protocol, run-level data, statistical outputs, and provenance
+records are included.
+
+## Observational-noise sensitivity
+
+The `noise_sensitivity/` directory contains the controlled additive-Gaussian
+observational-noise study on 12 CEC2014 functions at D=30 using four noise
+levels and five run IDs (240 optimization runs). No parameter retuning or core
+modification was performed. The directory includes the frozen protocol,
+function-specific noise scales, run-level data, statistical outputs,
+diagnostics, and provenance records.
+
 ## Frozen evidence and provenance
 
 Frozen datasets and reported outputs are retained as evidence of the analyses
