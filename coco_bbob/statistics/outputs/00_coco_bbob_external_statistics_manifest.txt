@@ -2,13 +2,13 @@ COCO/BBOB EXTERNAL COMPARISON — REVISION STATISTICS MANIFEST
 ======================================================================
 
 FROZEN INPUTS
-D2-D20: /mnt/d/PHD/DMGSO_Information Scince/Revision/coco_bbob/backup/frozen_20260911/coco_bbob_deterministic_D2_D20_corrected_FROZEN.csv
+D2-D20: /mnt/d/PHD/DMGSO_Information Scince/Revision/DMGSO_Reproducibility_Package/coco_bbob/data/frozen/coco_bbob_deterministic_D2_D20_corrected_FROZEN.csv
 SHA-256: 68c2ae2b4776714d2a3fcd4202232db1d745e1d71fe6465cff6102c9ab14d229
 
-D40: /mnt/d/PHD/DMGSO_Information Scince/Revision/coco_bbob/backup/frozen_20260911/coco_bbob_deterministic_D40_corrected_FROZEN.csv
+D40: /mnt/d/PHD/DMGSO_Information Scince/Revision/DMGSO_Reproducibility_Package/coco_bbob/data/frozen/coco_bbob_deterministic_D40_corrected_FROZEN.csv
 SHA-256: 9e67d3bbe0f8d8c19f382235107abba7698f2eec59068eb5f51da60c95a3877d
 
-Official f*: /mnt/d/PHD/DMGSO_Information Scince/Revision/coco_bbob/backup/frozen_20260911/bbob_fopt_cocoex_2.8.2_FROZEN.csv
+Official f*: /mnt/d/PHD/DMGSO_Information Scince/Revision/DMGSO_Reproducibility_Package/coco_bbob/data/frozen/bbob_fopt_cocoex_2.8.2_FROZEN.csv
 SHA-256: ff273dc9c7cd97c15f3abf70e7b0816ca76137b57cc7907fb7aea814357b5dc0
 
 CORRECTED PERFORMANCE MEASURE
@@ -53,6 +53,14 @@ Problem-level win/tie/loss.
 FE PROTOCOL
 Maximum budget = 1000 x D.
 Realized FE use is reported descriptively.
+
+COMPLETE FUNCTION-LEVEL NUMERICAL REPORTING
+Output: 08_function_level_complete_numerical_results.csv
+One row per dimension x function x algorithm.
+Each row summarizes 15 instances x 5 run_id configurations = 75 observations.
+Reported fields include mean, median, SD, quartiles/IQR, min/max corrected error,
+maximum FE budget, and realized FE mean/median/min/max.
+This output is descriptive only and does not alter the inferential unit.
 
 DIMENSION-WISE FRIEDMAN RESULTS
 D=2: statistic=337.0487804878045, p=1.096527282917338e-71, Kendall_W=0.2340616531165309

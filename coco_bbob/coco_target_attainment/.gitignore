@@ -1,0 +1,16 @@
+# Generated native COCO/cocopp artifacts
+exdata/
+cocopp_postprocessing/
+__pycache__/
+
+# Generated figure products
+figure_export/png_300dpi/
+
+# Other generated rendering products
+*.pdf
+*.svg
+*.html
+*.js
+*.css
+*.log
+*.pyc

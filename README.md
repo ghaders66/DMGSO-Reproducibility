@@ -33,7 +33,8 @@ details required for independent reconstruction.
 ## Repository structure
 
 - `cec2014/` -- CEC2014 external comparison.
-- `coco_bbob/` -- COCO/BBOB external comparison.
+- `coco_bbob/` -- COCO/BBOB external comparison, including standard target-attainment analysis.
+- `coco_bbob/coco_target_attainment/` -- native COCO logging and cocopp target-attainment/ECDF reproducibility materials.
 - `ablation/` -- CEC2014 and COCO/BBOB V0--V4 ablation studies.
 - `sensing_topology/` -- reviewer-driven sensing-topology experiment.
 - `environment/` -- pinned dependencies and execution-environment information.
@@ -60,6 +61,13 @@ The repository retains the historical raw execution summaries and the frozen
 corrected datasets based on the official BBOB optimum values. The correction
 is a post-processing operation on the error reference and does not rerun the
 optimization experiments.
+
+The `coco_bbob/coco_target_attainment/` directory provides the supplementary
+native COCO logging workflow used for standard cocopp target-attainment and
+ECDF reporting. It includes the reproducible runner, run-level summary,
+provenance manifest, and figure-export script. Generated native COCO and
+cocopp artifacts are excluded from version control because they can be
+regenerated from the supplied workflow.
 
 ## Ablation studies
 

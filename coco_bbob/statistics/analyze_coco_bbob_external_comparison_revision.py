@@ -171,7 +171,7 @@ from scipy.stats import friedmanchisquare, rankdata, wilcoxon
 CODE_DIR = Path(__file__).resolve().parent
 COCO_DIR = CODE_DIR.parents[1]
 
-FROZEN_DIR = COCO_DIR / "backup" / "frozen_20260911"
+FROZEN_DIR = COCO_DIR / "coco_bbob" / "data" / "frozen"
 
 D2_D20_PATH = (
     FROZEN_DIR
@@ -190,8 +190,9 @@ FOPT_PATH = (
 
 OUTPUT_DIR = (
     COCO_DIR
+    / "coco_bbob"
     / "statistics"
-    / "external_comparison"
+    / "outputs"
 )
 
 EXPECTED_HASH_D2_D20 = (
@@ -491,6 +492,118 @@ def make_problem_level_medians(
         )
         .reset_index(drop=True)
     )
+
+
+# =============================================================================
+# 3B. COMPLETE FUNCTION-LEVEL NUMERICAL SUMMARY
+# =============================================================================
+
+def function_level_complete_numerical_summary(
+    df: pd.DataFrame,
+) -> pd.DataFrame:
+    """
+    Provide reviewer-requested descriptive results for each:
+
+        dimension × function × algorithm
+
+    Statistics are computed directly from the corrected run-level
+    observations. Each row summarizes:
+
+        15 BBOB instances × 5 run_id configurations = 75 observations.
+
+    This table is descriptive only and does not replace the problem-level
+    median aggregation used for inferential statistics.
+    """
+    out = (
+        df.groupby(
+            ["dimension", "function_id", "algorithm"],
+            as_index=False,
+            observed=True,
+        )
+        .agg(
+            instances=("instance_id", "nunique"),
+            configurations=("run_id", "nunique"),
+            observations=("error_corrected", "size"),
+            error_mean=("error_corrected", "mean"),
+            error_median=("error_corrected", "median"),
+            error_std=("error_corrected", "std"),
+            error_q25=("error_corrected", lambda x: x.quantile(0.25)),
+            error_q75=("error_corrected", lambda x: x.quantile(0.75)),
+            error_min=("error_corrected", "min"),
+            error_max=("error_corrected", "max"),
+            fe_budget=("FE_budget", "first"),
+            fe_mean=("fe_used", "mean"),
+            fe_median=("fe_used", "median"),
+            fe_min=("fe_used", "min"),
+            fe_max=("fe_used", "max"),
+        )
+    )
+
+    out["error_iqr"] = (
+        out["error_q75"] - out["error_q25"]
+    )
+
+    expected_rows = 5 * 24 * 5
+
+    if len(out) != expected_rows:
+        raise RuntimeError(
+            f"Expected {expected_rows} function-level rows, found {len(out)}."
+        )
+
+    if not (out["instances"] == 15).all():
+        raise RuntimeError(
+            "Function-level summary does not contain 15 instances per row."
+        )
+
+    if not (out["configurations"] == 5).all():
+        raise RuntimeError(
+            "Function-level summary does not contain 5 run_id configurations "
+            "per row."
+        )
+
+    if not (out["observations"] == 75).all():
+        raise RuntimeError(
+            "Function-level summary does not contain 75 observations per row."
+        )
+
+    if not (out["fe_budget"] == 1000 * out["dimension"]).all():
+        raise RuntimeError(
+            "Function-level FE budget is inconsistent with the 1000D protocol."
+        )
+
+    if not (out["fe_max"] <= out["fe_budget"]).all():
+        raise RuntimeError(
+            "At least one realized FE count exceeds its prescribed budget."
+        )
+
+    column_order = [
+        "dimension",
+        "function_id",
+        "algorithm",
+        "instances",
+        "configurations",
+        "observations",
+        "error_mean",
+        "error_median",
+        "error_std",
+        "error_q25",
+        "error_q75",
+        "error_iqr",
+        "error_min",
+        "error_max",
+        "fe_budget",
+        "fe_mean",
+        "fe_median",
+        "fe_min",
+        "fe_max",
+    ]
+
+    return (
+        out[column_order]
+        .sort_values(["dimension", "function_id", "algorithm"])
+        .reset_index(drop=True)
+    )
+
 
 
 # =============================================================================
@@ -1197,6 +1310,14 @@ def write_manifest(
         "Maximum budget = 1000 x D.",
         "Realized FE use is reported descriptively.",
         "",
+        "COMPLETE FUNCTION-LEVEL NUMERICAL REPORTING",
+        "Output: 08_function_level_complete_numerical_results.csv",
+        "One row per dimension x function x algorithm.",
+        "Each row summarizes 15 instances x 5 run_id configurations = 75 observations.",
+        "Reported fields include mean, median, SD, quartiles/IQR, min/max corrected error,",
+        "maximum FE budget, and realized FE mean/median/min/max.",
+        "This output is descriptive only and does not alter the inferential unit.",
+        "",
         "DIMENSION-WISE FRIEDMAN RESULTS",
     ]
 
@@ -1290,6 +1411,10 @@ def main() -> None:
         problem_level
     )
 
+    function_level_complete = function_level_complete_numerical_summary(
+        df
+    )
+
     friedman, average_ranks = friedman_and_ranks_by_dimension(
         problem_level
     )
@@ -1343,6 +1468,12 @@ def main() -> None:
     trend.to_csv(
         OUTPUT_DIR / "07_dmgso_dimension_trend.csv",
         index=False,
+    )
+
+    function_level_complete.to_csv(
+        OUTPUT_DIR / "08_function_level_complete_numerical_results.csv",
+        index=False,
+        float_format="%.17g",
     )
 
     write_manifest(
